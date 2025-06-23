@@ -2,42 +2,16 @@
 useHead({ title: '文章' })
 definePageMeta({ headerText: '最近更新' })
 
-const { data, error, status } = useLazyFetch('/api/feed/blog')
-
-const articles = computed(() => data.value.slice(0, 11))
 </script>
 
 <template>
     <ZTitle icon="👀">
         <span class="badge-text">来自博客
-            <ZRawLink to="https://blog.lilithya.su"><mark>莉莉丝的星空日记处</mark></ZRawLink>
+            <ZRawLink to="https://blog.lilithya.su"><mark>莉莉丝的星空日记</mark></ZRawLink>
             的文章
         </span>
     </ZTitle>
 
-    <template v-if="status === 'pending'">
-        <p>加载中…</p>
-    </template>
-    <template v-else-if="status === 'error'">
-        <p>{{ error }}</p>
-    </template>
-    <div v-else class="article-list">
-        <ZArticle v-for="article in articles" :key="article.id" v-bind="article" />
-    </div>
-    <div class="article-more">
-        <ZRawLink to="https://blog.lilithya.su/">
-            <Icon name="ph:navigation-arrow-duotone" />
-            <span>访问</span>
-        </ZRawLink>
-        <ZRawLink to="https://blog.lilithya.su/link">
-            <Icon name="ph:link-duotone" />
-            <span>友链</span>
-        </ZRawLink>
-        <ZRawLink to="https://blog.lilithya.su/archive">
-            <Icon name="ph:archive-duotone" />
-            <span>归档</span>
-        </ZRawLink>
-    </div>
 </template>
 
 <style lang="scss" scoped>
