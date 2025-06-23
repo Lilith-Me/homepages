@@ -21,7 +21,7 @@ const appConfig = useAppConfig()
                 <ZButton icon="ph:files-duotone" to="https://blog.lilithya.su/" primary>
                     博客
                 </ZButton>
-                <ZButton icon="ph:github-logo-duotone" to="https://github.com/L33Z22L11">
+                <ZButton icon="ph:github-logo-duotone" to="https://github.com/Lilith-Me">
                     GitHub
                 </ZButton>
             </div>

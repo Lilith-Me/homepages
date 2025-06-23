@@ -13,7 +13,7 @@ export default defineNuxtConfig({
             ],
             meta: [
                 { name: 'author', content: `${homepageConfig.author.name} <${homepageConfig.author.email}>` },
-                { 'name': 'generator', 'data-github-repo': 'https://github.com/L33Z22L11/homepage-v5' },
+                { 'name': 'generator', 'data-github-repo': 'https://github.com/Lilith-Me/homepage' },
             ],
             templateParams: {
                 separator: '|',
